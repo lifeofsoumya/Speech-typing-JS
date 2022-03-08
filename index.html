@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Speech Typing</title>
     <style>
         body {
             background-color: black;
@@ -16,7 +16,12 @@
             border-radius: 50%;
             z-index: 9999;
             margin: 0 auto;
+            cursor: pointer;
+        }
+
+        .anim {
             animation: floatAnimation 1s cubic-bezier(.5, -0.005, 0.2, 1) 300ms infinite alternate;
+            /* animation: glow 1s ease-in-out infinite alternate; */
         }
 
         .f-dots {
@@ -25,6 +30,16 @@
             height: 55px;
             border: 2px solid #2F88FF;
         }
+/* 
+        @keyframes glow { 
+            from {
+                text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+            }
+
+            to {
+                text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+            }
+        } */
 
         @keyframes floatAnimation {
             0% {
@@ -48,7 +63,7 @@
 
 <body>
     <div class="container">
-        <div class="floating-dots f-dots"><svg width="50" height="50" viewBox="0 0 48 48" fill="none"
+        <div id="voice-btn" class="floating-dots f-dots"><svg width="50" height="50" viewBox="0 0 48 48" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <path fill-opacity=".01" d="M0 0h48v48H0z" />
                 <path d="M4 30c0 6.627 5.373 12 12 12s10-4 11-7l1.538-5L35 9l9 33m-3.273-12H28.54" stroke="#fff"
@@ -60,5 +75,6 @@
 
     </div>
 </body>
+<script src="/script.js"></script>
 
 </html>
