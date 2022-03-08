@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Speech Typing</title>
     <style>
         body {
@@ -17,7 +18,7 @@
             z-index: 9999;
             margin: 0 auto;
             cursor: pointer;
-            transform: translateY(30%);
+            transform: translateY(24%);
         }
 
         .anim {
@@ -33,7 +34,7 @@
 
         @keyframes glow {
             from {
-                transform: scale(1) rotate(2deg) translateY(30%);
+                transform: scale(1)  translateY(24%);
                 box-shadow: 0 0 1px #fff,
                     0 0 2px #fff,
                     0 0 4px #fff,
@@ -45,7 +46,7 @@
             }
 
             to {
-                transform: scale(1.05) rotate(4deg) translateY(30%);
+                transform: scale(1.05) translateY(24%);
                 box-shadow: 0 0 1px #fff,
                     0 0 2px #fff,
                     0 0 4px #fff,
@@ -67,7 +68,7 @@
 </head>
 
 <body>
-    <div class="container">
+    <section>
         <div id="voice-btn" class="floating-dots f-dots"><svg width="50" height="50" viewBox="0 0 48 48" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <path fill-opacity=".01" d="M0 0h48v48H0z" />
@@ -76,9 +77,14 @@
                 <rect x="10" y="9" width="12" height="27" rx="6" fill="#2F88FF" stroke="#fff" stroke-width="4"
                     stroke-linecap="round" stroke-linejoin="round" />
             </svg>
+        </div> &nbsp;
+        <h1 id="speak-h1" class="hidden">Speak</h1>
+        <div class="container">
+            <div class="texts">
+            </div>
         </div>
+    </section>
 
-    </div>
 </body>
 <script src="/script.js"></script>
 
