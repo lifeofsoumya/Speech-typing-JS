@@ -17,6 +17,7 @@
             z-index: 9999;
             margin: 0 auto;
             cursor: pointer;
+            transform: translateY(30%);
         }
 
         .anim {
@@ -32,7 +33,7 @@
 
         @keyframes glow {
             from {
-                transform: scale(1) rotate(5deg);
+                transform: scale(1) rotate(2deg) translateY(30%);
                 box-shadow: 0 0 1px #fff,
                     0 0 2px #fff,
                     0 0 4px #fff,
@@ -44,7 +45,7 @@
             }
 
             to {
-                transform: scale(1.1) rotate(8deg);
+                transform: scale(1.05) rotate(4deg) translateY(30%);
                 box-shadow: 0 0 1px #fff,
                     0 0 2px #fff,
                     0 0 4px #fff,
