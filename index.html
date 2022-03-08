@@ -20,8 +20,7 @@
         }
 
         .anim {
-            animation: floatAnimation 1s cubic-bezier(.5, -0.005, 0.2, 1) 300ms infinite alternate;
-            /* animation: glow 1s ease-in-out infinite alternate; */
+            animation: glow 1s ease-in-out infinite alternate;
         }
 
         .f-dots {
@@ -30,28 +29,33 @@
             height: 55px;
             border: 2px solid #2F88FF;
         }
-/* 
-        @keyframes glow { 
+
+        @keyframes glow {
             from {
-                text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+                transform: scale(1) rotate(5deg);
+                box-shadow: 0 0 1px #fff,
+                    0 0 2px #fff,
+                    0 0 4px #fff,
+                    0 0 6px #0fa,
+                    0 0 8px #0fa,
+                    0 0 9px #0fa,
+                    0 0 10px #0fa,
+                    0 0 15px #0fa;
             }
 
             to {
-                text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
-            }
-        } */
-
-        @keyframes floatAnimation {
-            0% {
-                transform: scale(1) rotate(5deg);
-                box-shadow: 0px 0px 9px 1px #d3c27603;
-            }
-
-            100% {
                 transform: scale(1.1) rotate(8deg);
-                box-shadow: 0px 0px 9px 3px #f1e5ab10;
+                box-shadow: 0 0 1px #fff,
+                    0 0 2px #fff,
+                    0 0 4px #fff,
+                    0 0 6px #2F88FF,
+                    0 0 8px #2F88FF,
+                    0 0 9px #2F88FF,
+                    0 0 10px #2F88FF,
+                    0 0 15px #2F88FF;
             }
         }
+
 
         /* @media screen and (max-width:992px) {
             .floating-dots {
