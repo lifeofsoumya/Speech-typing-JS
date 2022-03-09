@@ -46,6 +46,41 @@ function convertAudio(){
             window.speechSynthesis.speak(utterance)
         }
         if (
+            text.includes("where are you from")
+        ) {
+            p = document.createElement("p");
+            p.classList.add("reply");
+            replyText = "I'm from MetaTool Lab";
+            p.innerText = replyText;
+            texts.appendChild(p);
+            utterance = new SpeechSynthesisUtterance(replyText);
+            window.speechSynthesis.speak(utterance)
+        }
+        if (
+            text.includes("who are you") ||
+            text.includes("what are you")
+        ) {
+            p = document.createElement("p");
+            p.classList.add("reply");
+            replyText = "I'm a prototype browser Assistant";
+            p.innerText = replyText;
+            texts.appendChild(p);
+            utterance = new SpeechSynthesisUtterance(replyText);
+            window.speechSynthesis.speak(utterance)
+        }
+        if (
+            text.includes("who created you") ||
+            text.includes("who made you")
+        ) {
+            p = document.createElement("p");
+            p.classList.add("reply");
+            replyText = "Soumya created me";
+            p.innerText = replyText;
+            texts.appendChild(p);
+            utterance = new SpeechSynthesisUtterance(replyText);
+            window.speechSynthesis.speak(utterance)
+        }
+        if (
             text.includes("what's your name") ||
             text.includes("what is your name")
         ) {
