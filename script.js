@@ -11,18 +11,27 @@ function addAnim(){
 }
 
 function convertAudio(){
-const texts = document.querySelector(".texts");
+    
+    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    const recognition = new SpeechRecognition();
+    
+    recognition.interimResults = true;      // fetches the result instantly without waiting
+    
+    let p = document.createElement('p');
 
-const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-const recognition = new SpeechRecognition();
+    
+    recognition.addEventListener('result', (e)=>{
+        const text = Array.from(e.results)
+        .map((result) => result[0])
+        .map((result) => result.transcript)
+        .join("");
+        console.log(text);
+        p.innerText = text;
+    })
+    
+    const texts = document.querySelector(".texts");
 
-recognition.interimResults = true;      // fetches the result instantly without waiting
-
-let p = document.createElement('p');
-
-recognition.addEventListener('result', (e)=>{
-    console.log(e.results);
-})
+    texts.appendChild(p);
 
 recognition.start();
 
