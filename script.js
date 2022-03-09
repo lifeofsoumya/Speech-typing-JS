@@ -31,13 +31,19 @@ function convertAudio(){
     
     texts.appendChild(p);
 
+    var replyText; // text to be replied as chat
+    var utterance; // voice to be replied from the chat
+
     if (e.results[0].isFinal) {
         if (text.includes("hi") || text.includes("hello"))  
         {
             p = document.createElement("p");
             p.classList.add("reply");
-            p.innerText = "Hello There";
+            replyText = "Hi there";
+            p.innerText = replyText;
             texts.appendChild(p);
+            utterance = new SpeechSynthesisUtterance(replyText);
+            window.speechSynthesis.speak(utterance)
         }
         if (
             text.includes("what's your name") ||
@@ -45,15 +51,21 @@ function convertAudio(){
         ) {
             p = document.createElement("p");
             p.classList.add("reply");
-            p.innerText = "My Name is MetaTool";
+            replyText = "My Name is MetaTool";
+            p.innerText = replyText;
             texts.appendChild(p);
+            utterance = new SpeechSynthesisUtterance(replyText);
+            window.speechSynthesis.speak(utterance)
         }
         if (text.includes("open my website")) {
             p = document.createElement("p");
             p.classList.add("reply");
-            p.innerText = "opening IndGeek";
+            replyText = "opening IndGeek"
+            p.innerText = replyText;
             texts.appendChild(p);
             window.open("https://indgeek.com");
+            utterance = new SpeechSynthesisUtterance(replyText);
+            window.speechSynthesis.speak(utterance)
         }
         p = document.createElement("p");
         }
