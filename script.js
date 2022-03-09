@@ -12,6 +12,7 @@ function addAnim(){
 
 function convertAudio(){
     
+    const texts = document.querySelector(".texts");
     const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
     const recognition = new SpeechRecognition();
     
@@ -26,12 +27,41 @@ function convertAudio(){
         .map((result) => result.transcript)
         .join("");
         console.log(text);
-        p.innerText = text;
-    })
+    p.innerText = text;
     
-    const texts = document.querySelector(".texts");
-
     texts.appendChild(p);
+
+    if (e.results[0].isFinal) {
+        if (text.includes("hi") || text.includes("hello"))  
+        {
+            p = document.createElement("p");
+            p.classList.add("reply");
+            p.innerText = "Hello There";
+            texts.appendChild(p);
+        }
+        if (
+            text.includes("what's your name") ||
+            text.includes("what is your name")
+        ) {
+            p = document.createElement("p");
+            p.classList.add("reply");
+            p.innerText = "My Name is MetaTool";
+            texts.appendChild(p);
+        }
+        if (text.includes("open my website")) {
+            p = document.createElement("p");
+            p.classList.add("reply");
+            p.innerText = "opening IndGeek";
+            texts.appendChild(p);
+            window.open("https://indgeek.com");
+        }
+        p = document.createElement("p");
+        }
+    });
+
+    recognition.addEventListener("end", () => {
+        recognition.start();
+        });
 
 recognition.start();
 
