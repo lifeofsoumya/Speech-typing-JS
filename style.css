@@ -22,7 +22,7 @@
         text-align: center;
         width: 100%;
         font-size: 50px;
-        margin-bottom: 10px;
+        margin-bottom: 35px;
     }
     .container {
         width: 90%;
@@ -41,6 +41,8 @@
     }
     .texts p.reply {
         text-align: right;
+        background-color: rgb(39, 34, 46);
+        color:white;        
     }
     .hidden{
         display: none;
