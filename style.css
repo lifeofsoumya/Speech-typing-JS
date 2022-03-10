@@ -12,7 +12,8 @@
         width: 100%;
         display: flex;
         align-items: flex-start;
-        background-color: rgb(37, 37, 37);
+        background: rgb(14,13,23);
+        background: linear-gradient(90deg, rgba(14,13,23,1) 0%, rgba(27,27,65,1) 50%, rgba(25,28,28,1) 100%);
         flex-direction: column;
         padding: 50px 0;
     }
