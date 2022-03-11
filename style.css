@@ -56,7 +56,15 @@
         position: fixed;
     }
     @media screen and (max-width:492px) {
-        #chrome-only {
+        #chrome-only, #meta-svg {
             display:none;
         }
+    }
+
+    #meta-svg{
+        position: absolute;
+        right:40px;
+        bottom: -20px;
+        opacity: .07;
+        position: fixed;
     }
